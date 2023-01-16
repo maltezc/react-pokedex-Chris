@@ -1,6 +1,7 @@
-import React from 'react'
-
-const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
+import React from "react";
+import "./Pokecard.css";
+const IMAGE_BASE_URL =
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
 /** Pokecard: Single Pokemon card
  *
@@ -11,15 +12,15 @@ const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master
  */
 
 function Pokecard({ name, type, id }) {
-  const image = `${IMAGE_BASE_URL}${id}.png`
+  const image = `${IMAGE_BASE_URL}${id}.png`;
 
   return (
-    <div className='Pokecard'>
-      <div className='Pokecard-name'>{name}</div>
-      <img className='Pokecard-image' srt={image} alt={name}/>
-      <div className='Pokecard-type'>Type: {type}</div>
+    <div className="Pokecard">
+      <div className="Pokecard-name">{name}</div>
+      <img className="Pokecard-image" src={image} alt={name} />
+      <div className="Pokecard-type">Type: {type}</div>
     </div>
-  )
+  );
 }
 
 export default Pokecard;

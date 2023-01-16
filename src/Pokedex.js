@@ -1,5 +1,6 @@
-import React from 'react'
-import Pokecard from './Pokecard';
+import React from "react";
+import Pokecard from "./Pokecard";
+import "./Pokedex.css";
 
 /** Pokedex: Display of all cards
  *
@@ -9,15 +10,11 @@ import Pokecard from './Pokecard';
 
 function Pokedex({ pokemon }) {
   return (
-    <div>
-      <h1>Pokedex</h1>
-      <div>
-        {pokemon.map(p => (
-          <Pokecard
-            id={p.id}
-            name={p.name}
-            type={p.type}
-          />
+    <div className="Pokedex">
+      <h1 className="Pokedex-title">Pokedex</h1>
+      <div className="Pokedex-cards">
+        {pokemon.map((p) => (
+          <Pokecard id={p.id} name={p.name} type={p.type} />
         ))}
       </div>
     </div>
