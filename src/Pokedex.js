@@ -1,6 +1,7 @@
 import React from "react";
 import Pokecard from "./Pokecard";
 import "./Pokedex.css";
+import Pokelist from "./Pokelist";
 
 /** Pokedex: Display of all cards
  *
@@ -8,7 +9,7 @@ import "./Pokedex.css";
  * - pokemon: array of cards
  */
 
-function Pokedex({ pokemon }) {
+function Pokedex({ pokemon=Pokelist }) {
   return (
     <div className="Pokedex">
       <h1 className="Pokedex-title">Pokedex</h1>
@@ -20,5 +21,5 @@ function Pokedex({ pokemon }) {
     </div>
   );
 }
-
+// react bootstrap
 export default Pokedex;
